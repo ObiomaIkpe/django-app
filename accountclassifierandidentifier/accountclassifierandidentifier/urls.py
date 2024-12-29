@@ -15,11 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
-    path('about/', views.aboutpage)
+    path('about/', views.aboutpage),
+    path('posts/', include('posts.urls')) #we are telling django that we want to look inside our post app, and look at the urls file inside of the post application we created in a different folder.
 ]
