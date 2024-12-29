@@ -14,9 +14,17 @@
 </head>
 <body>
     <nav>
-        <a href='/'>🏫</a> |
-        <a href='/about'>😁</a> |
-        <a href={% url 'posts:list'%}>🗞️</a> 
+        <a href='/'>
+            <span role="img" aria-label="Home" title="Home">🏫</a> </span> |
+
+        <a href='/about'>
+            <span role="img" aria-label="Smiley-emoji" title="Smiley-emoji">😁</a> </span> |
+
+        <a href={% url 'posts:list'%}>
+            <span role= "img" aria-label="rolled-newspaper" title="rolled-newspaper">🗞️</a> </span> |
+
+        <a href="{% url 'users:register' %}">
+            <span role= "img" aria-label="user registration" title="user registration">📜</a> </span>
     </nav>
 
     <main>
