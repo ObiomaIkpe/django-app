@@ -12,6 +12,9 @@ Login User
 
     {% csrf_token %}
         {{form}}
+    {%if request.GET.next %}
+    <input type="hidden" name="next" value="{{request.GET.next}}" />
+    {% endif%}
     <button class="form-submit">submit</button>
 
     </form>
